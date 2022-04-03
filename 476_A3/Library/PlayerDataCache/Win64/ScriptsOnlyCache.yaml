@@ -1,6 +1,11 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AIMovement
+    - AiAgent
+    - BArrive
+    - Buff
+    - FaceDir
     - Launcher
     - Menu
     - MenuManager
@@ -9,6 +14,10 @@ ScriptsOnlyBuild:
     - PlayerManager
     - RoomListItem
     - RoomManager
+    - Shell
+    - Spawnpoint
+    - SpawnpointManager
+    - ZombieController
     PhotonUnityNetworking.Editor.dll:
     - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
@@ -64,13 +73,43 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1878}
+    - Class: 114
+      Script: {instanceID: 2506}
+    - Class: 114
+      Script: {instanceID: 2894}
+    - Class: 114
+      Script: {instanceID: 3684}
+    - Class: 114
+      Script: {instanceID: 3742}
+    - Class: 114
+      Script: {instanceID: 4322}
+    - Class: 114
+      Script: {instanceID: 4552}
+    - Class: 114
+      Script: {instanceID: 24744}
+    - Class: 114
+      Script: {instanceID: 24836}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -107,6 +146,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 89
       Script: {instanceID: 0}
     - Class: 104
@@ -126,48 +169,52 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1876}
     - Class: 114
-      Script: {instanceID: 2068}
+      Script: {instanceID: 2070}
     - Class: 114
-      Script: {instanceID: 2392}
+      Script: {instanceID: 2394}
     - Class: 114
-      Script: {instanceID: 2510}
+      Script: {instanceID: 2514}
     - Class: 114
-      Script: {instanceID: 2526}
+      Script: {instanceID: 2530}
     - Class: 114
-      Script: {instanceID: 2556}
+      Script: {instanceID: 2560}
     - Class: 114
-      Script: {instanceID: 2686}
+      Script: {instanceID: 2690}
     - Class: 114
-      Script: {instanceID: 2818}
+      Script: {instanceID: 2822}
     - Class: 114
-      Script: {instanceID: 2882}
+      Script: {instanceID: 2886}
     - Class: 114
-      Script: {instanceID: 2890}
+      Script: {instanceID: 2896}
     - Class: 114
-      Script: {instanceID: 2974}
+      Script: {instanceID: 2980}
     - Class: 114
-      Script: {instanceID: 3180}
+      Script: {instanceID: 3186}
     - Class: 114
-      Script: {instanceID: 3252}
+      Script: {instanceID: 3258}
     - Class: 114
-      Script: {instanceID: 3596}
+      Script: {instanceID: 3602}
     - Class: 114
-      Script: {instanceID: 3974}
+      Script: {instanceID: 3984}
     - Class: 114
-      Script: {instanceID: 3992}
+      Script: {instanceID: 4002}
     - Class: 114
-      Script: {instanceID: 4120}
+      Script: {instanceID: 4132}
     - Class: 114
-      Script: {instanceID: 4274}
+      Script: {instanceID: 4286}
     - Class: 114
-      Script: {instanceID: 4276}
+      Script: {instanceID: 4288}
     - Class: 114
-      Script: {instanceID: 4404}
+      Script: {instanceID: 4420}
     - Class: 114
-      Script: {instanceID: 4582}
+      Script: {instanceID: 4602}
+    - Class: 114
+      Script: {instanceID: 24744}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
+      Script: {instanceID: 0}
+    - Class: 136
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -288,6 +335,12 @@ ScriptsOnlyBuild:
     className: MenuManager
   - hash:
       serializedVersion: 2
+      Hash: be05efd299f01ff9ff3f27730415778b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: BArrive
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -352,6 +405,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SpawnpointManager
   - hash:
       serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
@@ -468,6 +527,12 @@ ScriptsOnlyBuild:
     className: PhotonView
   - hash:
       serializedVersion: 2
+      Hash: 50b2de651df38e973c27b1234326c5cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FaceDir
+  - hash:
+      serializedVersion: 2
       Hash: 748dd2a2a28da4e618912da5ac45684b
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -534,7 +599,7 @@ ScriptsOnlyBuild:
     className: CullingHandler
   - hash:
       serializedVersion: 2
-      Hash: 304b22c3ef359bfa85aca88890c2b0d8
+      Hash: 11570e3805c5f157a1adacc364d24d2f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -666,10 +731,22 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 1471083ffdfa14616b893575b44ec250
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AiAgent
+  - hash:
+      serializedVersion: 2
       Hash: 5ae36aa27e46b25633847fc7cb6b5c87
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: CullArea
+  - hash:
+      serializedVersion: 2
+      Hash: eb02feb4286a5806bb13b9d45da43c95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Spawnpoint
   - hash:
       serializedVersion: 2
       Hash: aba7b2852ef61d175dd9602e7723d5e5
@@ -822,6 +899,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
+      Hash: f26f4a5ed7b44761e50e644111416173
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ZombieController
+  - hash:
+      serializedVersion: 2
       Hash: e7a73f5f78ba6445195ec23b74a1ce2d
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -838,6 +921,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: PunTurnManager
+  - hash:
+      serializedVersion: 2
+      Hash: 50b2de651df38e973c27b1234326c5cf
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AIMovement
   - hash:
       serializedVersion: 2
       Hash: 8220b46879dc5e37db1b940c938f5744
@@ -880,6 +969,18 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: PhotonTeamsManager
+  - hash:
+      serializedVersion: 2
+      Hash: a660ed8777ff3051d22327d1283fdc97
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shell
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Buff
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

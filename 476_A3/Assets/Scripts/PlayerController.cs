@@ -6,6 +6,7 @@ using Photon.Pun;
 public class PlayerController : MonoBehaviour, IsDamagable
 {
     [SerializeField] GameObject TankTurret;
+    [SerializeField] GameObject ShootPoint;
     [SerializeField] float mouseSensitivity, sprintSpeed, speed, smoothTime;
 
     Vector3 moveAmount;
@@ -16,8 +17,14 @@ public class PlayerController : MonoBehaviour, IsDamagable
     PlayerManager playerManager;
     PhotonView PV;
 
+    public Rigidbody m_Shell;
 
-     void Awake()
+    public AudioSource m_ShootingAudio;         
+    public AudioClip m_ExploClip;            
+    public AudioClip m_FireClip;                
+
+
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
@@ -44,7 +51,7 @@ public class PlayerController : MonoBehaviour, IsDamagable
 
         if (Input.GetMouseButtonDown(0))
         {
-            Shoot();
+            PV.RPC("Shoot", RpcTarget.AllViaServer);
         }
     }
 
@@ -66,10 +73,14 @@ public class PlayerController : MonoBehaviour, IsDamagable
         TankTurret.transform.localEulerAngles = Vector3.up * AimingRotation;
     }
 
-    void Shoot()
+    public void BuffSpeed()
     {
-        Debug.Log("Shoot");
+        speed *= 1.5f;
+        sprintSpeed *= 1.5f;
+        Debug.Log("Buffed");
     }
+
+    
 
     private void FixedUpdate()
     {
@@ -90,6 +101,8 @@ public class PlayerController : MonoBehaviour, IsDamagable
             return;
 
         Debug.Log("Ahhh");
+        m_ShootingAudio.clip = m_ExploClip;
+        m_ShootingAudio.Play();
 
         Die();
     }
@@ -97,6 +110,17 @@ public class PlayerController : MonoBehaviour, IsDamagable
     void Die()
     {
         playerManager.Die();
+    }
+
+    [PunRPC]
+    void Shoot()
+    {
+        Rigidbody shellInstance = Instantiate(m_Shell,ShootPoint.transform.position, TankTurret.transform.rotation);
+
+        shellInstance.velocity = 25f * TankTurret.transform.forward;
+
+        m_ShootingAudio.clip = m_FireClip;
+        m_ShootingAudio.Play();
     }
 
 }
