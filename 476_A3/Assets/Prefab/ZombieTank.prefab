@@ -495,6 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   stopRadius: 6
+  distance: 0
 --- !u!114 &6790364053066107742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -524,6 +525,7 @@ MonoBehaviour:
   ShootPoint: {fileID: 6336283271005694141}
   countDownToShoot: 4
   ai: {fileID: 2174730445083032927}
+  ba: {fileID: 6105017470488214998}
   m_Shell: {fileID: -2380618276322396040, guid: 64eea9472f0c82f49894a72b2ea729b3, type: 3}
   m_ShootingAudio: {fileID: 617258446255669559}
   m_FireClip: {fileID: 8300000, guid: d2b5010cf7891fb49b7969fc2c9df62d, type: 3}

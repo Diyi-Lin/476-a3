@@ -9,6 +9,7 @@ public class ZombieController : MonoBehaviour
     [SerializeField] GameObject ShootPoint;
     public float countDownToShoot = 4;
     [SerializeField] AiAgent ai;
+    [SerializeField] BArrive ba;
     Transform target;
     float countDown = 3.0f;
 
@@ -18,20 +19,28 @@ public class ZombieController : MonoBehaviour
     public AudioClip m_FireClip;                
     public void Update()
     {
-        countDownToShoot -= 1.0f*Time.deltaTime;
-        if (countDownToShoot <= 0)
+        if (inShootRange())
         {
-            Shoot();
-            countDownToShoot = 3;
-        }
-        countDown -= 1.0f * Time.deltaTime;
-        if (countDown <= 0)
-        {
-            FindTarget();
-            countDown = 16;
+            countDownToShoot -= 1.0f * Time.deltaTime;
+            if (countDownToShoot <= 0)
+            {
+                Shoot();
+                countDownToShoot = 3;
+            }
+            countDown -= 1.0f * Time.deltaTime;
+            if (countDown <= 0)
+            {
+                FindTarget();
+                countDown = 16;
+            }
         }
 
-
+    }
+    bool inShootRange()
+    {
+        if (ba.distance < 8f)
+            return true;
+        else return false;
     }
 
     void Shoot()

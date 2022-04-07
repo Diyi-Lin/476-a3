@@ -7,6 +7,7 @@ public class BArrive : AIMovement
 {
     public float stopRadius;
     private float perception = 90;
+    public float distance;
     private void DrawDebug(AiAgent agent)
     {
         if (debug)
@@ -29,7 +30,7 @@ public class BArrive : AIMovement
             return output;
         else
         {
-            float distance = Mathf.Sqrt(desiredVelocity.sqrMagnitude);
+            distance = Mathf.Sqrt(desiredVelocity.sqrMagnitude);
 
             if (distance > stopRadius)
             {

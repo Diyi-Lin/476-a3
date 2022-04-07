@@ -12,6 +12,7 @@ ScriptsOnlyBuild:
     - PlayerController
     - PlayerListItem
     - PlayerManager
+    - Rocks
     - RoomListItem
     - RoomManager
     - Shell
@@ -88,23 +89,27 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1878}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 2506}
+      Script: {instanceID: 1604}
     - Class: 114
-      Script: {instanceID: 2894}
+      Script: {instanceID: 1888}
     - Class: 114
-      Script: {instanceID: 3684}
+      Script: {instanceID: 2518}
     - Class: 114
-      Script: {instanceID: 3742}
+      Script: {instanceID: 2690}
     - Class: 114
-      Script: {instanceID: 4322}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 4552}
+      Script: {instanceID: 2916}
     - Class: 114
-      Script: {instanceID: 24744}
+      Script: {instanceID: 3712}
     - Class: 114
-      Script: {instanceID: 24836}
+      Script: {instanceID: 3770}
+    - Class: 114
+      Script: {instanceID: 4352}
+    - Class: 114
+      Script: {instanceID: 4584}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 135
@@ -161,55 +166,57 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1548}
     - Class: 114
-      Script: {instanceID: 1596}
+      Script: {instanceID: 1598}
     - Class: 114
-      Script: {instanceID: 1642}
+      Script: {instanceID: 1602}
     - Class: 114
-      Script: {instanceID: 1774}
+      Script: {instanceID: 1648}
     - Class: 114
-      Script: {instanceID: 1876}
+      Script: {instanceID: 1780}
     - Class: 114
-      Script: {instanceID: 2070}
+      Script: {instanceID: 1886}
     - Class: 114
-      Script: {instanceID: 2394}
+      Script: {instanceID: 2080}
     - Class: 114
-      Script: {instanceID: 2514}
+      Script: {instanceID: 2404}
     - Class: 114
-      Script: {instanceID: 2530}
+      Script: {instanceID: 2526}
     - Class: 114
-      Script: {instanceID: 2560}
+      Script: {instanceID: 2542}
+    - Class: 114
+      Script: {instanceID: 2576}
     - Class: 114
       Script: {instanceID: 2690}
     - Class: 114
-      Script: {instanceID: 2822}
+      Script: {instanceID: 2712}
     - Class: 114
-      Script: {instanceID: 2886}
+      Script: {instanceID: 2844}
     - Class: 114
-      Script: {instanceID: 2896}
+      Script: {instanceID: 2908}
     - Class: 114
-      Script: {instanceID: 2980}
+      Script: {instanceID: 2918}
     - Class: 114
-      Script: {instanceID: 3186}
+      Script: {instanceID: 3002}
     - Class: 114
-      Script: {instanceID: 3258}
+      Script: {instanceID: 3212}
     - Class: 114
-      Script: {instanceID: 3602}
+      Script: {instanceID: 3286}
     - Class: 114
-      Script: {instanceID: 3984}
+      Script: {instanceID: 3630}
     - Class: 114
-      Script: {instanceID: 4002}
+      Script: {instanceID: 4014}
     - Class: 114
-      Script: {instanceID: 4132}
+      Script: {instanceID: 4032}
     - Class: 114
-      Script: {instanceID: 4286}
+      Script: {instanceID: 4162}
     - Class: 114
-      Script: {instanceID: 4288}
+      Script: {instanceID: 4316}
     - Class: 114
-      Script: {instanceID: 4420}
+      Script: {instanceID: 4318}
     - Class: 114
-      Script: {instanceID: 4602}
+      Script: {instanceID: 4450}
     - Class: 114
-      Script: {instanceID: 24744}
+      Script: {instanceID: 4634}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -267,6 +274,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Launcher
+  - hash:
+      serializedVersion: 2
+      Hash: a660ed8777ff3051d22327d1283fdc97
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Shell
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Buff
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -329,13 +348,19 @@ ScriptsOnlyBuild:
     className: OnPointerOverTooltip
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: ParrelSync.Example
+    className: CustomArgumentExample
+  - hash:
+      serializedVersion: 2
       Hash: 1fe1944c83853aceb615156976f31470
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuManager
   - hash:
       serializedVersion: 2
-      Hash: be05efd299f01ff9ff3f27730415778b
+      Hash: e70da2bca38a8f86cb265a76c6a6ef06
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: BArrive
@@ -465,6 +490,12 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: OnEscapeQuit
+  - hash:
+      serializedVersion: 2
+      Hash: 21a77ef5e8b96c3f8e631d3cf1f466d7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Rocks
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -599,7 +630,7 @@ ScriptsOnlyBuild:
     className: CullingHandler
   - hash:
       serializedVersion: 2
-      Hash: 11570e3805c5f157a1adacc364d24d2f
+      Hash: d25a81afd575330cd8afb7fc3661c020
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerController
@@ -899,7 +930,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: f26f4a5ed7b44761e50e644111416173
+      Hash: 0f0187f54f501d9655f870527f582bd3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: ZombieController
@@ -969,18 +1000,6 @@ ScriptsOnlyBuild:
     assemblyName: PhotonUnityNetworking.Utilities.dll
     namespaceName: Photon.Pun.UtilityScripts
     className: PhotonTeamsManager
-  - hash:
-      serializedVersion: 2
-      Hash: a660ed8777ff3051d22327d1283fdc97
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Shell
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Buff
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

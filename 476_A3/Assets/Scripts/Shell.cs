@@ -26,7 +26,7 @@ public class Shell : MonoBehaviour
 
         if(rock != null)
         {
-            rock.TakeDamage();
+            Destroy(rock.gameObject);
             Destroy(this.gameObject, 0f);
         }
     }
